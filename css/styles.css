@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html {
     background-color: #292929;
 }
@@ -58,7 +60,7 @@ nav a {
     text-decoration: none;
     text-align: center;
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 nav a:hover {
@@ -79,6 +81,7 @@ nav a:hover {
 .report {
     color: white;
     margin-bottom: 100px;
+    width: 50%;
 }
 
 .imgbar {
