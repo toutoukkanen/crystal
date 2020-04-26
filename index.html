@@ -41,6 +41,29 @@
     <p>TYPE.SS</p>
 
     <img src="images/InstMSG.png" id="instMSG">
+	
+	<script>
+	var hakunappi = document.getElementsByClassName("login")[0];
+
+	hakunappi.addEventListener('click', nappi);
+
+	function nappi() {
+		var username = document.getElementsByClassName("username")[0].value;
+		var password = document.getElementsByClassName("password")[0].value;
+		console.log(username);
+		console.log(password);
+		
+		if (username == "brown.kenneth" && password == "s4l4ry") {
+			window.open("hub.html");
+		}
+		else
+		{
+		console.log("username/password is incorrect");
+		}
+		
+	}
+	
+	</script>
 
 
 
