@@ -14,7 +14,7 @@ p {
     color: white;
 }
 
-h1, h2{
+h1, h2, h3{
     text-align: center;
     font-family: 'Righteous', cursive;
 }
@@ -89,6 +89,26 @@ nav h1 {
     margin-left: 10px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+.documentList {
+    display: flex;
+    text-align: justify;
+}
+
+.documentList ul {
+    color: white;
+    list-style-type: decimal;
+    width: 33%;
+}
+
+.documentList ul h3 {
+    text-align: left;
+}
+
+.documentList ul li {
+    color: white;
+}
+
 
 .h1 {
     color: deepskyblue;
