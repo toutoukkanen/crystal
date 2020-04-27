@@ -114,7 +114,7 @@ nav h1 {
 .documentList ul {
     color: white;
     list-style-type: decimal;
-    width: 33%;
+    width: 100%;
 }
 
 .documentList ul h3 {
