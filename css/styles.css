@@ -6,6 +6,10 @@ html {
     background-color: #292929;
 }
 
+body {
+    text-align: center;
+}
+
 p {
     color: white;
 }
@@ -48,6 +52,7 @@ nav {
 nav ul {
     list-style-type: none;
     padding-left: 0;
+    margin-right: 600px;
 }
 
 nav li {
@@ -57,17 +62,41 @@ nav li {
 nav a {
     display: block;
     width: 100px;
-    background-color: green;
+    background-color: deepskyblue;
     text-decoration: none;
     text-align: center;
+    margin: 1px;
 
     font-family: 'Lato', sans-serif;
 }
 
-nav a:hover {
-    background-color: red;
+nav a:visited {
+    color: #414141;
 }
 
+nav a:hover {
+    background-color: dodgerblue;
+}
+
+nav a:active {
+    color: #414141;
+}
+
+nav h1 {
+    color: deepskyblue;
+    text-decoration: underline;
+    margin-right: auto;
+    margin-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.h1 {
+    color: deepskyblue;
+    margin-right: auto;
+    margin-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-bottom: 50px;
+}
 
 #instMSG {
     width: 45%;
@@ -78,6 +107,7 @@ nav a:hover {
     text-align: center;
     display: inline-block;
     margin-top: 15px;
+    background-color: deepskyblue;
 }
 
 .report {
@@ -110,4 +140,30 @@ nav a:hover {
 
 .font {
     font-style: italic;
+}
+
+.username {
+    background-color: deepskyblue;
+}
+
+.usernameLabel {
+    margin-top: 20px;
+}
+
+.password {
+    background-color: deepskyblue;
+}
+
+#typess {
+    margin-top: 50px;
+}
+
+#footertext {
+    color: deepskyblue;
+    padding-top: 40px;
+    font-size: larger;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    margin-top: 40px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
