@@ -82,6 +82,22 @@ nav a:active {
     color: #414141;
 }
 
+section ul li a {
+    color: white;
+}
+
+section ul li a:visited {
+    color: white;
+}
+
+section ul li a:hover {
+    color: deepskyblue;
+}
+
+section ul li a:active {
+    color: dodgerblue;
+}
+
 nav h1 {
     color: deepskyblue;
     text-decoration: underline;
@@ -117,6 +133,13 @@ nav h1 {
     margin-left: 10px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin-bottom: 50px;
+}
+
+ul h3 {
+    color: deepskyblue;
+    margin-right: auto;
+    margin-left: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #instMSG {
