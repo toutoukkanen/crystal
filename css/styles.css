@@ -212,3 +212,8 @@ ul h3 {
     margin-top: 40px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}
