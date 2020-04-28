@@ -46,8 +46,8 @@ function auth()
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_incident_report7.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_personal_notes1");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_fix_your_shit");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_personal_notes1.html");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_fix_your_shit.html");
   }
   else 
   {
