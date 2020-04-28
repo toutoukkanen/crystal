@@ -57,7 +57,12 @@
 		console.log(username);
 		console.log(password);
 		
-		if (username == "brown.kenneth" && password == "s4l4ry") {
+        if (username == "brown.kenneth" && password == "s4l4ry") 
+        {
+            // Save username and password to local storage
+            window.localStorage.setItem("username", username);
+            window.localStorage.setItem("password", password);
+
 			window.open("hub.html");
 		}
 		else

@@ -1,10 +1,7 @@
 'use strict';
 
-// TODO:
-// Add clearance check
-
 const button = document.querySelector("button");
-button.addEventListener("click", auth);
+button.addEventListener("click", checkLoginDetails);
 
 var level1List = document.getElementById('level1');
 var level2List = document.getElementById('level2');
@@ -14,10 +11,37 @@ var level4List = document.getElementById('level4');
 const userName = document.getElementsByClassName('username')[0];
 const passWord = document.getElementsByClassName('password')[0];
 
+
+// If found username and password, authenticate
+if(window.localStorage.getItem("username") && window.localStorage.getItem("password"))
+{
+  console.log("Skipped to auth");
+  auth();
+}
+
+function checkLoginDetails()
+{
+  // If not empty and not same username
+  if (userName.value != null && userName.value != window.localStorage.getItem("username"))
+  {
+    window.localStorage.setItem("username", userName.value);
+     console.log("Username set");
+  }
+
+  // If not empty and not same password
+  if (passWord.value != null && passWord.value != window.localStorage.getItem("password"))
+  {
+    window.localStorage.setItem("password", passWord.value);
+    console.log("Password set");
+  }
+
+  auth();
+}
+
 function auth()
 {
 
-  // Clean up the list
+  // Clean up the lists whether the credentials are right or not
   while(level1List.hasChildNodes())
   {
     level1List.removeChild(level1List.firstChild);
@@ -38,8 +62,7 @@ function auth()
     level4List.removeChild(level4List.firstChild);
   }
 
-
-  if(userName.value == "brown.kenneth" && passWord.value == "s4l4ry")
+  if(window.localStorage.getItem("username") == "brown.kenneth" && window.localStorage.getItem("password") == "s4l4ry")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
