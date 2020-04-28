@@ -217,3 +217,14 @@ ul h3 {
     height: 400px;
     width: 100%;
 }
+
+#table {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+table tr th {
+    padding: 10px;
+    font-size: large;
+}
