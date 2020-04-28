@@ -46,7 +46,8 @@ function auth()
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_incident_report7.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
 
-    getData(level4List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_personal_notes1");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_fix_your_shit");
   }
   else 
   {
@@ -60,7 +61,7 @@ async function getData(levelList, url)
   try
   {
     const vastaus = await fetch(url);              // Start search.
-    if (!vastaus.ok) throw new Error('error'); // If error happens, throw error
+    if (!vastaus.ok) throw new Error('Resource not found from url ' + url); // If error happens, throw error
     const rawHTML = await vastaus.text();                   // Catch raw HTML text got from url
      
      
