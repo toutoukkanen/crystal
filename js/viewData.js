@@ -66,12 +66,28 @@ function auth()
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
+
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_incident_report7.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
 
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_personal_notes1.html");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_userbase1.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_fix_your_shit.html");
   }
+  else if(window.localStorage.getItem("username") == "amelin.yuri" && window.localStorage.getItem("password") == "102xxT")
+  {
+    document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
+
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
+
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_regarding_your_job.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dc102.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium.html");
+
+  }
+
+
   else 
   {
     document.getElementById("loginText").innerHTML = "Error: invalid username or password";
