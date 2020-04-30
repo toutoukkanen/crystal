@@ -157,7 +157,7 @@ ul h3 {
 .report {
     color: white;
     margin-bottom: 100px;
-    width: 50%;
+    width: 30%;
     text-align: justify;
 }
 
@@ -222,6 +222,8 @@ ul h3 {
     color: white;
     text-align: center;
     width: 100%;
+    padding-left: 420px;
+    padding-right: 350px;
 }
 
 table tr th {
