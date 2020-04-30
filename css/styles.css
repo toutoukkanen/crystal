@@ -157,8 +157,9 @@ ul h3 {
 .report {
     color: white;
     margin-bottom: 100px;
-    width: 30%;
+    width: 50%;
     text-align: justify;
+    padding-left: 400px;
 }
 
 .imgbar {
