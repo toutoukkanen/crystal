@@ -66,7 +66,6 @@ function auth()
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
-
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_incident_report7.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
@@ -74,6 +73,7 @@ function auth()
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_personal_notes1.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_userbase1.html");
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_fix_your_shit.html");
+
   }
   else if(window.localStorage.getItem("username") == "amelin.yuri" && window.localStorage.getItem("password") == "102xxT")
   {
@@ -85,9 +85,22 @@ function auth()
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dc102.html");
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium.html");
 
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dp22.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium_applications1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_personal_notes1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_userbase1.html");
+
   }
+  else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password") == "theyknowus")
+  {
+    document.getElementById("loginText").innerHTML = "You are logged in as Jaxon Thomson";
 
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
 
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_regarding_your_job.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_hello_thomson.html");
+
+  }
   else 
   {
     document.getElementById("loginText").innerHTML = "Error: invalid username or password";
