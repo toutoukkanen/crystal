@@ -88,7 +88,9 @@ function auth()
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dp22.html");
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium_applications1.html");
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_personal_notes1.html");
+    
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_userbase1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_message.html");
 
   }
   else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password") == "theyknowus")
@@ -99,6 +101,7 @@ function auth()
 
     getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_regarding_your_job.html");
     getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_hello_thomson.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_yuasa.html");
 
   }
   else 
