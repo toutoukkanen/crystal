@@ -91,7 +91,7 @@ function auth()
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_welcome_aboard.html");
     //getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
     //getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_regarding_your_job.html");
 
