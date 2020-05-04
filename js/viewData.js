@@ -227,27 +227,11 @@ function loadScript(path, callback, encryptedData)
     head.appendChild(script);
 }
 
-//var myPrettyCode = function() 
 function decryptData(encryptedData) 
 {
-  // Here, do whatever you want
-
-
-  //console.log(encryptedData);
-
-  //let katastrofi = "U2FsdGVkX19OL0mGNPzQWFLa8ORA5lU2dsBy0srT7ekMLRPUXRNI/Vk/lMdRVtX3ir9vS52vkuz1RS4fzKPfmDcz8t6TAbgFxtKyDASlwWihugYr9aX2CupnFhMJjWYAc9Lw5ICaeNkV9BrB7EmQ3eboyTal3+7+JrmquWOsZBC12nB9+Tzk9NMycStbPcVM2A51HsuJ1WisVpmkjBU/8+3pgiX1/WrEZ7ilmEEjK63f3D0Vr3GmHulh/Pp1K6QhyQW1KcpKnSJ2v/TS3oqJfuJL/4BQVk7tqpH1ybL/DGNKROKzMcQSHg81Cp51TVpjMurotyR1D2FIdC7tNnKYfcRSh440sTpqiq7aJdXemQw/gRAfCkxL0xCk7mifmrJq3/njcUhiEFwDqWPoUxha+HsIBU/1SP+eA5iCHaus4UCptwvMmTdP5mGIp1H2Cdp+F2Ujl347mbF67dpAn06O1fBxNOgecpTBz/PsvUooP+Oa9ZCnS4ROp3/37KcZYFM/IItF2Qmc1F6HWs3/M7mX+Hy9ng1yRR94HaCewcmqn/z/FksOEPRLdX8t4msZ4COpfX/nxGzggWBRJuoZ/D3P/+30ztdeuNFcj6U22WRDpGq+L3wa/3g/ID5BsXz3Xq+p9tYjCi79Qpz1dW8cfR9Gqn/j9tepu+e9MrxitwSdVts+ynp4lLLupNZqEsAHm+6ytORXQ5W3TLYj59EAnRaebau0WEBdjLZwYuonLOMi+RmQPgKoLcyPteXWq1NaEILAbij5yxqOedmHo6htDS8rumTplzWWtlUk87z0d0hs0H2s0V9HsqC65ifhZbP/18MXKzbyqzei83HyE87V4SNpOyGFqE0Mx/bEUe8fisiAPBC441IQYtTehAVRMFMxPy6/0kAKoQjbqMb/AJrcnUoQCdFK/oLLf95okeo4wY4fojuOCipnrXEqwZX6s/zhvOcS4E49reGEbyFpINkkBoUqLnjZ5qkppg9og/G2tPH86W8htfvGfgfH8kq+QrGitWTrRrhs/L6fkfURkkNSrAYCJEzRPa1KSwypjFTttds9K7a3SSYnYq3FuvDDVb6r3frPfM+3uumWXOA2DP2aj+z9H1N9i2JIlUmQIwmy1eK8HZMaYiMaLij4MdK4YhxdmXVw5mrsP5Hoh/FO+XCyIOf5CDO5+W0LiE0VyKWX4wsST/OZkerD9RffGkrNFLh6dNq9yZQK0P3G8v1TwcLni5DkPtKWChXAfWq73+4r9Ir5/Sh1GKZpESRYlBWETsxL1ESSKPJRK/hWB8rDQ+Q08C39X+fiEsf1VtqWDwQ/SrgMF6J+uHD7r5M1qOhITxPAp8bmAZIRNgCeGCkXPI7ShacBb9UZrHW8Jn+eLep3EibtRPh6SNE9gBHpRpkQ2h+1SJ6U1va9BqBrpAgO6drkjc2sWFgb6hwSRIYiNeHnMSQExknT12x1OSA8f+7t3TRLoBc1aWFtNDnieGJqSEiBlcEypQxmr+Q3gw0yMwACzkmO7xvLFSj7OXh6CYNudlI93DA7R4hGfUYyNMnAelaY8LlMM3+349/8n0ymBnF453qxox2LigtbrmLHtI5nQ/3iNxYi1/mZSlORsyim4bzXP4EgyTHQFXk+OSw0TRXOnpskjrwSsk7Q1Y/MHNLDbhIVyrr0+JlJWc6nbJJCSocmR8M0Z1mGLTNEGIxdPh+2WaPDOXiCx73Rzn8qjYkb7OypP+X7VjZ+07gcOvUcJg2PgODarAixjZ88P+4w9uMATDMsyNYZT0zqFURoIVupGykhZQsDghIb7Ji62FGuHhZhnoZYgVtQcAc5hypmrStfYb8jEYIoQAqE0SuEa/PK4SQa8hKFwCUeVk1xG7SCLNHsbgrB1cyNRnetvfEA+obRV8n8dElvESnBLQ/vtpeeBrHbb9gd";
-
-  // Debub encrypt file
-  
-  /*
-  var debugHTML = "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>Userbase1</title><style></style><link rel=\"stylesheet\" href=\"./css/styles.css\"></head><body><nav class=\"navbar clearfix\"><h1>Crystal Inc.</h1><ul><li><a href=\"./hub.html\">HOME</a></li><li><a href=\"./map.html\">MAP</a></li><li><a href=\"./secret.html\">SECRET</a></li></ul></nav><h1 class=\"h1\">Crystal data</h1><h3>Clearance Level 1</h3><table id=\"table\"><tr><th>Username</th><th>Login </th></tr><tr><td>enfield.john</td><td>DATA:LBzSpMccCr</td></tr><tr><td>amelin.yuri</td><td>102xxT</td></tr><tr><td>geiger.heinrich</td><td>DATA:fRz1V9uWDx</td></tr><tr><td>gray.ellen</td><td>DATA:0LBAQCyvZE</td></tr><tr><td>chapman.aris</td><td>DATA:bZtQ9zRsbR</td></tr><tr><td>desert.thomas</td><td>DATA:CtXaJYe18M</td></tr><tr><td>thomson.jaxon</td><td>DATA:DNrpmOsQmi</td></tr><tr><td>richardson.sylvia</td><td>DATA:aAeAHQUTno</td></tr><tr><td>white.ada</td><td>DATA:rGWbOdk3d8</td></tr><tr><td>griffiths.megan</td><td>DATA:O9RvuZulyR</td></tr><tr><td>perry.dave</td><td>DATA:Txok5PGMD9</td></tr><tr><td>anderson.lars</td><td>DATA:ZCQJ9kR6B7</td></tr></table><footer><p id=\"footertext\">HIDDEN CRYSTAL INC. FORUM</p></footer></body></html>";
-  var debugEncrypted = CryptoJS.AES.encrypt(debugHTML, "s4l4ry");
-  console.log(debugEncrypted.toString());
-  */
-
   try 
   {
-    var decrypted = CryptoJS.AES.decrypt(encryptedData, "s4l4ry");
+    var decrypted = CryptoJS.AES.decrypt(encryptedData, window.localStorage.getItem("password"));
 
     var decryptedData = decrypted.toString(CryptoJS.enc.Utf8);
 
@@ -260,5 +244,4 @@ function decryptData(encryptedData)
     console.log("Decryption failed");
   }
 
-  
 };
