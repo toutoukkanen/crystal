@@ -174,6 +174,7 @@ function placeItemOnList(data)
   a.href = "#top"; // Assign link
   a.innerHTML = clonePage.querySelector('title').innerHTML; // Find the title to name the link
 
+  // Add a clickable function to open document
   a.addEventListener("click", function()
   {
     document.querySelector("html").innerHTML = clonePage.innerHTML;
@@ -187,7 +188,26 @@ function placeItemOnList(data)
     //document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
   }); 
 
-  level1List.appendChild(li); 
+  // Determine, which list should the item be placed on
+  var clearanceLevel;
+  clearanceLevel = clonePage.querySelector('h3').innerHTML; // There should be only 1 h3 in each document
+  
+  if(clearanceLevel == "Clearance Level 1")
+  {
+    level1List.appendChild(li); 
+  }
+  else if(clearanceLevel == "Clearance Level 2")
+  {
+    level2List.appendChild(li); 
+  }
+  else if(clearanceLevel == "Clearance Level 3")
+  {
+    level3List.appendChild(li); 
+  }
+  else if(clearanceLevel == "Clearance Level 4")
+  {
+    level4List.appendChild(li); 
+  }
 }
 
 function loadScript(path, callback, encryptedData)
