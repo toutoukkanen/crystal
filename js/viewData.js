@@ -1,13 +1,14 @@
 'use strict';
 
-//requirejs(["aes"], function(aes) {
-//});
-
 // JavaScript implementation of Java's HashCode
-Object.defineProperty(String.prototype, 'hashCode', {
-  value: function() {
+// Used to make the password. Not the most secure way but it works to some extent
+Object.defineProperty(String.prototype, 'hashCode', 
+{
+  value: function() 
+  {
     var hash = 0, i, chr;
-    for (i = 0; i < this.length; i++) {
+    for (i = 0; i < this.length; i++) 
+    {
       chr   = this.charCodeAt(i);
       hash  = ((hash << 5) - hash) + chr;
       hash |= 0; // Convert to 32bit integer
@@ -15,15 +16,6 @@ Object.defineProperty(String.prototype, 'hashCode', {
     return hash;
   }
 });
-
-let salasana = "1234";
-//console.log("Salis: " + salasana.hashCode());
-
-let urli = "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html";
-//console.log("Urli: " + urli.hashCode());
-
-//var encryptedData;
-//var decryptedData = "invalid";
 
 const button = document.querySelector("button");
 button.addEventListener("click", checkLoginDetails);
@@ -87,7 +79,8 @@ function auth()
     level4List.removeChild(level4List.firstChild);
   }
 
-  if(window.localStorage.getItem("username") == "brown.kenneth" && window.localStorage.getItem("password") == "s4l4ry")
+  // Check password with hash
+  if(window.localStorage.getItem("username") == "brown.kenneth" && window.localStorage.getItem("password").hashCode() == "-951320784")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
@@ -100,7 +93,7 @@ function auth()
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_fix_your_shit.html");
 
   }
-  else if(window.localStorage.getItem("username") == "amelin.yuri" && window.localStorage.getItem("password") == "102xxT")
+  else if(window.localStorage.getItem("username") == "amelin.yuri" && window.localStorage.getItem("password").hashCode() == "1448766081")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
 
@@ -118,7 +111,7 @@ function auth()
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
 
   }
-  else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password") == "theyknowus")
+  else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password").hashCode() == "-1500121455")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Jaxon Thomson";
 
