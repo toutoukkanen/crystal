@@ -104,18 +104,18 @@ function auth()
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
+    //getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
 
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_regarding_your_job.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dc102.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_regarding_your_job.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dc102.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium.html");
 
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_dp22.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_derium_applications1.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_personal_notes1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dp22.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium_applications1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_personal_notes1.html");
     
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_userbase1.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level2_message.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_userbase1.html");
+    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
 
   }
   else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password") == "theyknowus")
