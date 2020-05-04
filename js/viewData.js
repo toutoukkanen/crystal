@@ -22,7 +22,7 @@ let salasana = "1234";
 let urli = "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html";
 //console.log("Urli: " + urli.hashCode());
 
-var encryptedData;
+//var encryptedData;
 //var decryptedData = "invalid";
 
 const button = document.querySelector("button");
@@ -142,57 +142,10 @@ async function getData(levelList, url)
   {
     const vastaus = await fetch(url);              // Start search
     if (!vastaus.ok) throw new Error('Resource not found from url ' + url); // If error happens, throw error
-    const rawHTML = await vastaus.text();                   // Catch raw HTML text got from url
-     
-    encryptedData = rawHTML;
+    const encryptedData = await vastaus.text();                   // Catch raw HTML text got from url
 
-    // Try to decrypt file
-    loadScript("./js/aes.js", decryptData);
-
-    //console.log(decryptedData);
-
-    /*
-    const secondFunction = async () => {
-      const result = await loadScript("./js/aes.js", decryptData) 
-      // do something else here after firstFunction completes
-
-      console.log("Finished");
-      console.log(decryptedData);
-
-    }
-
-    secondFunction();
-    */
-
-
-    //let decryptedData;
-
-    //loadScript("./js/aes.js", decryptData); 
-
-    //console.log(decryptedData);
-
-
-
-
-
-
-
-
-    //var clonePage = document.createElement('html');
-    //clonePage.innerHTML = rawHTML; // Convert the raw HTML text to a legit page
-
-
-
-    // Add new elements
-    //var li = document.createElement('li'); 
-    //var a = document.createElement('a');
-    //li.appendChild(a);
-
-    //let parsedURL = url.split('/'); // Divide the path in parts
-    //a.href = 'documents/' + parsedURL[parsedURL.length - 1]; // Assign the local link as the href
-    //a.innerHTML = clonePage.querySelector('title').innerHTML; // Find the title to name the link
-
-    //levelList.appendChild(li); 
+    // Try to decrypt data
+    loadScript("./js/aes.js",decryptData.bind(null, encryptedData));
 
   } catch (error) 
   { // Catch error
@@ -207,20 +160,6 @@ function placeItemOnList(data)
   clonePage.innerHTML = data; // Convert the raw HTML text to a legit page
 
   //document.querySelector("html").innerHTML = clonePage.innerHTML;
-
-      // Replace css because working directory has apparently changed
-  //var oldlink = document.getElementsByTagName("link").item(0);
-  //var newlink = document.createElement("link");
-  //newlink.setAttribute("rel", "stylesheet");
-  //newlink.setAttribute("type", "text/css");
-  //newlink.setAttribute("href", "./css/styles.css");
-  //document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-
-
-
-  //console.log(clonePage);
-
-  //console.log();
 
   // Add new elements
   var li = document.createElement('li');
@@ -240,26 +179,24 @@ function placeItemOnList(data)
     document.querySelector("html").innerHTML = clonePage.innerHTML;
 
     // Replace css because working directory has apparently changed
-    var oldlink = document.getElementsByTagName("link").item(0);
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", "./css/styles.css");
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    //var oldlink = document.getElementsByTagName("link").item(0);
+    //var newlink = document.createElement("link");
+    //newlink.setAttribute("rel", "stylesheet");
+    //newlink.setAttribute("type", "text/css");
+    //newlink.setAttribute("href", "./css/styles.css");
+    //document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
   }); 
-
-  //a.onclick = document.querySelector("html").innerHTML = clonePage.innerHTML;
 
   level1List.appendChild(li); 
 }
 
-function loadScript(url, callback)
+function loadScript(path, callback, encryptedData)
 {
     // Adding the script tag to the head as suggested before
     var head = document.head;
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = url;
+    script.src = path;
 
     // Then bind the event to the callback function.
     // There are several events for cross browser compatibility.
@@ -271,7 +208,7 @@ function loadScript(url, callback)
 }
 
 //var myPrettyCode = function() 
-function decryptData() 
+function decryptData(encryptedData) 
 {
   // Here, do whatever you want
 
