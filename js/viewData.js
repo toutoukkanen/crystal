@@ -152,33 +152,38 @@ function placeItemOnList(data)
   var clonePage = document.createElement('html');
   clonePage.innerHTML = data; // Convert the raw HTML text to a legit page
 
-  //document.querySelector("html").innerHTML = clonePage.innerHTML;
-
   // Add new elements
   var li = document.createElement('li');
-  //li.innerHTML = clonePage.querySelector('title').innerHTML;
-  //level1List.appendChild(li);
-
   var a = document.createElement('a');
   li.appendChild(a);
 
-  //let parsedURL = url.split('/'); // Divide the path in parts
-
-  a.href = "#top"; // Assign link
+  //a.href = "#top"; // Assign link
+  a.href = ""; // Assign link
   a.innerHTML = clonePage.querySelector('title').innerHTML; // Find the title to name the link
 
   // Add a clickable function to open document
-  a.addEventListener("click", function()
+  a.addEventListener("mousedown", function()
   {
-    document.querySelector("html").innerHTML = clonePage.innerHTML;
+    // Only mouse left and mouse middle opens document
+    var pressedButton = event.buttons;
+    if (pressedButton == 1 || pressedButton == 4)
+    {
+      // Open document in new window
+      //var documentWindow = window.open("./viewPage.html");
+      var documentWindow = window.open("");
+
+      documentWindow.document.write(clonePage.innerHTML);
+    }
+
+    //document.querySelector("html").innerHTML = clonePage.innerHTML;
 
     // Replace css because working directory has apparently changed
-    //var oldlink = document.getElementsByTagName("link").item(0);
-    //var newlink = document.createElement("link");
+    //var oldlink = documentWindow.document.getElementsByTagName("link").item(0);
+    //var newlink = documentWindow.document.createElement("link");
     //newlink.setAttribute("rel", "stylesheet");
     //newlink.setAttribute("type", "text/css");
     //newlink.setAttribute("href", "./css/styles.css");
-    //document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    //documentWindow.document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
   }); 
 
   // Determine, which list should the item be placed on
