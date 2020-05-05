@@ -1,22 +1,5 @@
 'use strict';
 
-// JavaScript implementation of Java's HashCode
-// Used to make the password. Not the most secure way but it works to some extent
-Object.defineProperty(String.prototype, 'hashCode', 
-{
-  value: function() 
-  {
-    var hash = 0, i, chr;
-    for (i = 0; i < this.length; i++) 
-    {
-      chr   = this.charCodeAt(i);
-      hash  = ((hash << 5) - hash) + chr;
-      hash |= 0; // Convert to 32bit integer
-    }
-    return hash;
-  }
-});
-
 const button = document.querySelector("button");
 button.addEventListener("click", checkLoginDetails);
 
@@ -33,7 +16,9 @@ const passWord = document.getElementsByClassName('password')[0];
 if(window.localStorage.getItem("username") && window.localStorage.getItem("password"))
 {
   console.log("Skipped to auth");
-  auth();
+  
+  // Load hashing script and send password to it
+  loadScript("./js/sha224.js",hashData.bind(null, window.localStorage.getItem("password")));
 }
 
 function checkLoginDetails()
@@ -42,7 +27,7 @@ function checkLoginDetails()
   if (userName.value != null && userName.value != window.localStorage.getItem("username"))
   {
     window.localStorage.setItem("username", userName.value);
-     console.log("Username set");
+    console.log("Username set");
   }
 
   // If not empty and not same password
@@ -52,10 +37,11 @@ function checkLoginDetails()
     console.log("Password set");
   }
 
-  auth();
+  // Load hashing script and send password to it
+  loadScript("./js/sha224.js",hashData.bind(null, window.localStorage.getItem("password")));
 }
 
-function auth()
+function auth(hashString)
 {
 
   // Clean up the lists whether the credentials are right or not
@@ -80,7 +66,7 @@ function auth()
   }
 
   // Check password with hash
-  if(window.localStorage.getItem("username") == "brown.kenneth" && window.localStorage.getItem("password").hashCode() == "-951320784")
+  if(window.localStorage.getItem("username") == "brown.kenneth" && hashString == "b3d6d82d529affabc06fbbd9dc2f203e64c635cb9ea4e5b397a10dd5")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
@@ -93,7 +79,7 @@ function auth()
     getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_fix_your_shit.html");
 
   }
-  else if(window.localStorage.getItem("username") == "amelin.yuri" && window.localStorage.getItem("password").hashCode() == "1448766081")
+  else if(window.localStorage.getItem("username") == "amelin.yuri" && hashString == "7dcdab2dc73ac0ff13d587ec56df4157c3b6a5c9af5d44f7666939e5")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
 
@@ -111,7 +97,7 @@ function auth()
     getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
 
   }
-  else if(window.localStorage.getItem("username") == "thomson.jaxon" && window.localStorage.getItem("password").hashCode() == "-1500121455")
+  else if(window.localStorage.getItem("username") == "thomson.jaxon" && hashString == "eab2bcd3618d0d5b9bff76eade91769bcdee948657675f075fd9f5fd")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Jaxon Thomson";
 
@@ -208,7 +194,7 @@ function placeItemOnList(data)
   }
 }
 
-function loadScript(path, callback, encryptedData)
+function loadScript(path, callback, data)
 {
     // Adding the script tag to the head as suggested before
     var head = document.head;
@@ -225,6 +211,25 @@ function loadScript(path, callback, encryptedData)
     head.appendChild(script);
 }
 
+
+function hashData(data)
+{
+  //console.log(data);
+  try
+  {
+    var hash = CryptoJS.SHA224(data);
+    var hashString = hash.toString();
+
+    // Now try to authenticate
+    auth(hashString);
+  }
+  catch(err)
+  {
+    console.log("Hashing failed: " + err);
+  }
+};
+
+// Used to decrypt documents
 function decryptData(encryptedData) 
 {
   try 
@@ -239,7 +244,7 @@ function decryptData(encryptedData)
   }
   catch(err) 
   {
-    console.log("Decryption failed");
+    console.log("Decryption failed: " + err);
   }
 
 };
