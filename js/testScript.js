@@ -33,7 +33,7 @@ function decryptData(encryptedData)
   var debugHTML = ``;
   
   
-  var password = "102xxT";
+  var password = "";
   console.log("Encrypting with password: " + password);
 
   var debugEncrypted = CryptoJS.AES.encrypt(debugHTML, password);

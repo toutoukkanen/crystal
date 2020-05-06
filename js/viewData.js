@@ -101,11 +101,18 @@ function auth(hashString)
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Jaxon Thomson";
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_regarding_your_job.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_lower_level_boys.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_hello_thomson.html");
 
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_regarding_your_job.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_hello_thomson.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level3_yuasa.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_personal_notes1.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_problems.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_problems2.html");
+
+    
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_hello_thomson.html");
+    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_yuasa.html");
+    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/pseudocrypt/level3_anand.html");
 
   }
   else 
