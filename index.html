@@ -43,7 +43,7 @@
     <img src="images/InstMSG.png" id="instMSG">
 
     <footer>
-        <p id="footertext">HIDDEN CRYSTAL INC. FORUM</p>
+        <p id="footertext">Crystal Inc.</p>
     </footer>
 	
 	<script>
@@ -54,12 +54,12 @@
 	function nappi() {
 		var username = document.getElementsByClassName("username")[0].value;
 		var password = document.getElementsByClassName("password")[0].value;
-		console.log(username);
-		console.log(password);
-		
+        
+        // Don't need any flashy mechanics yet
         if (username == "brown.kenneth" && password == "s4l4ry") 
         {
             // Save username and password to local storage
+            // Acceptable in this context
             window.localStorage.setItem("username", username);
             window.localStorage.setItem("password", password);
 

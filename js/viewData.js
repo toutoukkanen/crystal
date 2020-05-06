@@ -65,54 +65,58 @@ function auth(hashString)
     level4List.removeChild(level4List.firstChild);
   }
 
-  // Check password with hash
+  // Check password with hash and then get encrypted documents from github
   if(window.localStorage.getItem("username") == "brown.kenneth" && hashString == "b3d6d82d529affabc06fbbd9dc2f203e64c635cb9ea4e5b397a10dd5")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Kenneth Brown";
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_welcome_aboard.html");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_incident_report7.html");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_regarding_your_job.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_welcome_aboard.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_incident_report7.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_regarding_your_job.html");
 
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_personal_notes1.html");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_userbase1.html");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_fix_your_shit.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_personal_notes1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_userbase1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_fix_your_shit.html");
 
   }
   else if(window.localStorage.getItem("username") == "amelin.yuri" && hashString == "7dcdab2dc73ac0ff13d587ec56df4157c3b6a5c9af5d44f7666939e5")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
 
-    //getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/master/documents/level1_welcome_aboard.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_regarding_your_job.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dc102.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium.html");
 
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_regarding_your_job.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dc102.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium.html");
-
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dp22.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium_applications1.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_personal_notes1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dp22.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium_applications1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_personal_notes1.html");
     
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_userbase1.html");
-    getData(level2List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_userbase1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
 
   }
   else if(window.localStorage.getItem("username") == "thomson.jaxon" && hashString == "eab2bcd3618d0d5b9bff76eade91769bcdee948657675f075fd9f5fd")
   {
     document.getElementById("loginText").innerHTML = "You are logged in as Jaxon Thomson";
 
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_regarding_your_job.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_lower_level_boys.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_hello_thomson.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_regarding_your_job.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_lower_level_boys.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_hello_thomson.html");
 
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_personal_notes1.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_problems.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_problems2.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_personal_notes1.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_problems.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_problems2.html");
 
-    
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_hello_thomson.html");
-    getData(level3List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_yuasa.html");
-    getData(level1List, "https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_anand.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_yuasa.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level3_anand.html");
+
+  }
+  else if(window.localStorage.getItem("username") == "jones.michael" && hashString == "cf85a7cb3a7190b8cee18aa5b159053dfe9127597907711f8ca19f8d")
+  {
+    document.getElementById("loginText").innerHTML = "You are logged in as Michael Jones";
+
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level4_corruption.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level4_my_legacy.html");
 
   }
   else 
@@ -122,7 +126,7 @@ function auth(hashString)
 
 }
 
-async function getData(levelList, url) 
+async function getData(url) 
 {  
   try
   {
@@ -150,7 +154,6 @@ function placeItemOnList(data)
   var a = document.createElement('a');
   li.appendChild(a);
 
-  //a.href = "#top"; // Assign link
   a.href = ""; // Assign link
   a.innerHTML = clonePage.querySelector('title').innerHTML; // Find the title to name the link
 
@@ -162,21 +165,10 @@ function placeItemOnList(data)
     if (pressedButton == 1 || pressedButton == 4)
     {
       // Open document in new window
-      //var documentWindow = window.open("./viewPage.html");
       var documentWindow = window.open("");
 
       documentWindow.document.write(clonePage.innerHTML);
     }
-
-    //document.querySelector("html").innerHTML = clonePage.innerHTML;
-
-    // Replace css because working directory has apparently changed
-    //var oldlink = documentWindow.document.getElementsByTagName("link").item(0);
-    //var newlink = documentWindow.document.createElement("link");
-    //newlink.setAttribute("rel", "stylesheet");
-    //newlink.setAttribute("type", "text/css");
-    //newlink.setAttribute("href", "./css/styles.css");
-    //documentWindow.document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
   }); 
 
   // Determine, which list should the item be placed on
@@ -221,7 +213,6 @@ function loadScript(path, callback, data)
 
 function hashData(data)
 {
-  //console.log(data);
   try
   {
     var hash = CryptoJS.SHA224(data);
@@ -244,8 +235,6 @@ function decryptData(encryptedData)
     var decrypted = CryptoJS.AES.decrypt(encryptedData, window.localStorage.getItem("password"));
 
     var decryptedData = decrypted.toString(CryptoJS.enc.Utf8);
-
-    //console.log(decryptedData);
 
     placeItemOnList(decryptedData);
   }
