@@ -157,10 +157,10 @@ ul h3 {
 
 .report {
     color: white;
-    margin-bottom: 100px;
-    width: 50%;
+    margin-bottom: 100px;   
     text-align: justify;
-    padding-left: 400px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .imgbar {
