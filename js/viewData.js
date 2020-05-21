@@ -165,21 +165,15 @@ function placeItemOnList(data)
   // Add a clickable function to open document
   a.addEventListener("mousedown", function()
   {
-    // Mouse 3 opens document in new tab
+    // Mouse 1 or 3 opens document in new tab
     var pressedButton = event.buttons;
-    if (pressedButton == 4)
+    if (pressedButton == 1 || pressedButton == 4)
     {
       // Create new tab
       var documentWindow = window.open("");
 
       documentWindow.document.write(clonePage.innerHTML);
     }
-    // Mouse 1 opens document in current tab
-    else if (pressedButton == 1)
-    {
-      document.write(clonePage.innerHTML);
-    }
-
 
   }); 
 
