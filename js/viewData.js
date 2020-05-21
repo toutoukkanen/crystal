@@ -79,6 +79,8 @@ function auth(hashString)
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_userbase1.html");
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_fix_your_shit.html");
 
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level1_userbase1_1.html");
+
   }
   else if(window.localStorage.getItem("username") == "amelin.yuri" && hashString == "7dcdab2dc73ac0ff13d587ec56df4157c3b6a5c9af5d44f7666939e5")
   {
