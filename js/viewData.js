@@ -33,6 +33,7 @@ function checkLoginDetails()
   // If not empty and not same password
   if (passWord.value != null && passWord.value != window.localStorage.getItem("password"))
   {
+    // Acceptable in this context
     window.localStorage.setItem("password", passWord.value);
     console.log("Password set");
   }
@@ -84,15 +85,19 @@ function auth(hashString)
     document.getElementById("loginText").innerHTML = "You are logged in as Yuri Amelin";
 
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_regarding_your_job.html");
-    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dc102.html");
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium.html");
-
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dc102.html");
+    
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_dp22.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message1.html");
+
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message2.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message3.html");
+    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_record.html");
+
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_derium_applications1.html");
     getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_personal_notes1.html");
-    
-    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_userbase1.html");
-    getData("https://raw.githubusercontent.com/toutoukkanen/crystal/pseudocrypt/documents/level2_message.html");
 
   }
   else if(window.localStorage.getItem("username") == "thomson.jaxon" && hashString == "eab2bcd3618d0d5b9bff76eade91769bcdee948657675f075fd9f5fd")
