@@ -50,14 +50,17 @@ nav {
     background-color: #414141;
 }
 
+nav h1 {
+    flex-basis: 12%
+}
+
 nav ul {
+    display: flex;
     list-style-type: none;
     padding-left: 0;
     margin-right: 600px;
-}
-
-nav li {
-    float: left;
+    align-items: flex-start;
+    flex-grow: 1
 }
 
 nav a {
