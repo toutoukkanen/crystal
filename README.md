@@ -1,4 +1,4 @@
-Pseudocrypt is the most up to date and default branch of this project. If you want to see a more simple approach with no encryption, feel free to check the master branch.
+Pseudocrypt is the most up to date and default branch of this project.
 
 # Crystal Inc.
 
