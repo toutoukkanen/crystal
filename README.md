@@ -1,5 +1,3 @@
-Pseudocrypt is the most up to date and default branch of this project.
-
 # Crystal Inc.
 
 An unkown tale of the dark secrets of Crystal.
